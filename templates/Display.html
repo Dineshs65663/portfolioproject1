@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container mt-5">
+    <div class="jumbotron text-center bg-light p-4 rounded shadow">
+        <h1 class="display-5 mb-4">Image Upload Successful!</h1>
+        <p class="lead">Below is the information you provided along with your uploaded image.</p>
+    </div>
+
+    <div class="row mt-4">
+        {% for i in data %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card shadow-sm h-100">
+                {% if i.userpic %}
+                <img src="{{ i.userpic.url }}" class="card-img-top img-fluid" alt="User Image">
+                {% else %}
+                <div class="text-center p-4">No Image Provided</div>
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title"><strong>Name:</strong>{{ i.name }}</h5><hr>
+                    <p class="card-text"><strong>Email:</strong> {{ i.email }}</p>
+                    <p class="card-text"><strong>Description:</strong> {{ i.description }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+
