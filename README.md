@@ -83,7 +83,7 @@ To deploy the project, you can use platforms like:
 
 ## 📝 License
 
-This project is open source and available under the [MIT License](LICENSE) (you may add this file manually).
+Loading ....
 
 ## ✨ Author
 
